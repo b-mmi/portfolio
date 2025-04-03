@@ -22,33 +22,6 @@ $(document).ready(function(){
       $('.mo-nav').animate({'margin-left':'100%'})
    })
    
-   // $(window).on('scroll',function(){
-   //    $('.h2-jail h2').delay(200).animate({'top':'-480px'},1200)
-   //    $('.menu-btn').delay(1100).animate({'height':'35px'},300).children('span').animate({'height':'7px'},300)
-   // })
-
-   // $('section').on('mousewheel',function(e,d){
-   //    if(d<0){
-   //       $('.h2-jail h2').delay(200).animate({'top':'-480px'},1200)
-   //       $('.menu-btn').delay(1100).animate({'height':'35px'},300).children('span').animate({'height':'7px'},300)
-   //       //위애두줄 내가넣은거 지울거면 위에꺼 주석켜야됨
-   //       //마우스휠을내렸을때일어나는일
-
-   //       let nxt = $(this).next().offset().top;
-   //       //내가선택한섹션 다음섹션의 top
-   //       $('html, body').stop().animate({'scrollTop':nxt});
-   //       //html,body를 대상으로 스크롤이 움직이기 nxt변수만큼
-         
-   //    }else if(d>0){
-   //       //마우스휠을올렸을때일어나는일
-   //       $('.h2-jail h2').delay(200).animate({'top':'-480px'},1200)
-   //       $('.menu-btn').delay(1100).animate({'height':'35px'},300).children('span').animate({'height':'7px'},300)
-   //       let prv = $(this).prev().offset().top;
-   //       //내가선택한섹션 이전섹션의 top
-   //       $('html, body').stop().animate({'scrollTop':prv});
-   //       //html,body를 대상으로 스크롤이 움직이기 nxt변수만큼
-   //    }
-   // })
    $('section').on('mousewheel',function(e,d){
       $('.h2-jail h2').delay(200).animate({'top':'-480px'},1200)
       $('.menu-btn').delay(1100).animate({'height':'35px'},300).children('span').animate({'height':'7px'},300)
