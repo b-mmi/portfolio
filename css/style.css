@@ -101,7 +101,7 @@
 
 /*섹션1*/
 
-.sec1 .h2-jail{width: 90px; height: 475px;
+.sec1 .h2-jail{width: 90px; height: 550px;
     position: fixed;
     top: 28px; right: 0;
     overflow: hidden;
@@ -109,7 +109,7 @@
 .sec1 .h2-jail h2{font-size: 75px;
     transform: rotate(90deg);
     position: absolute;
-    right: -200px; top: 183px;
+    right: -220px; top: 200px;
     font-family: "Archivo Black", sans-serif;}
 .sec1>h2:nth-child(1){top: -2vh; right: 2vw;
     font-size: 20vh;}
