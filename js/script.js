@@ -143,6 +143,6 @@ $('.top-btn').on('click',function(){
   });
 
 
-  $(window).resize(function(){
-   document.location.reload();})
+//   $(window).resize(function(){
+//    document.location.reload();})
 })
