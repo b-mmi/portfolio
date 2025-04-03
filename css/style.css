@@ -109,7 +109,7 @@
 .sec1 .h2-jail h2{font-size: 75px;
     transform: rotate(90deg);
     position: absolute;
-    right: -220px; top: 200px;
+    right: -215px; top: 220px;
     font-family: "Archivo Black", sans-serif;}
 .sec1>h2:nth-child(1){top: -2vh; right: 2vw;
     font-size: 20vh;}
