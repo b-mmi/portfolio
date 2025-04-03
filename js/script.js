@@ -133,6 +133,14 @@ $('.top-btn').on('click',function(){
 
   }//이것이피씨끝
 
+  var delay = 300;
+  var timer = null; 
+  $(window).on('resize', function(){
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+    document.location.reload();
+    }, delay);
+  });
 
 
   $(window).resize(function(){
