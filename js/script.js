@@ -22,7 +22,7 @@ $(document).ready(function(){
       $('.mo-nav').animate({'margin-left':'100%'})
    })
    
-   $('section').on('mousewheel',function(e,d){
+   $(window).on('scroll',function(){
       $('.h2-jail h2').delay(200).animate({'top':'-480px'},1200)
       $('.menu-btn').delay(1100).animate({'height':'35px'},300).children('span').animate({'height':'7px'},300)
    })
