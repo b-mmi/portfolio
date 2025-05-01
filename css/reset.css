@@ -1,73 +1,103 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BagelFatOne-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/BagelFatOne-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 *{margin: 0; padding: 0;
-    font-family: "Noto Sans KR", sans-serif;}
+    font-family: 'LeferiPoint-WhiteObliqueA';}
+a{color: inherit;
+    text-decoration: none;}
 ul,li{list-style: none;}
-a{text-decoration: none; color: inherit;}
-.pc{display: none;}
+
 .mo{display: block;}
-/* body{-ms-overflow-style: none;}
-::-webkit-scrollbar {display: none;} */
+.pc{display: none;}
 
-section{width: 100%; height: 100vh;
-    position: relative;
-    overflow: hidden;}
-section>h2{font-size: 55px;
-    font-family: "Archivo Black", sans-serif;
-    letter-spacing: -1px;
+.fruit{height: 45vw;
     position: absolute;
-    /* line-height: 15vw;*/} 
-.map{height: 40%;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    border-left: 1.5px solid black;
-    position: fixed;
-    top: 30%; left: 5vw;
-    z-index: 999;}
-.map .pc{width: 8px; height: 8px;
-    background-color: black;
-    border-radius: 5px;
-    margin-left: -4.5px;
-    position: relative;}
-section>ul .pc span{white-space: nowrap;
-    position: absolute;
-    left: 10px; top: -1px;
-    font-size: 5vh;
-    transform: translateY(-50%);
-    font-family: "Archivo Black", sans-serif;
-    display: block;
-    cursor: pointer;
-    opacity: 0;
-    transition: all 0.5s;
-    line-height: 80px;}
-.map>li{transition: all 0.3s;}
-section>ul:hover .pc span{opacity: 1;
-    left: 20px}
-.map li span:hover{font-size: 6vh;}
-.map>li.on{scale: 1.5;}
-.map>li.on span{margin-left: -5px;}
-.map>li.on span:hover{font-size: 5vh;}
-/* .map>li.on span{scale:calc(100 / 3vh);} */
+    top: -12vw; right: 72vw;
+    animation: spin 4s linear infinite;
+}
+section:nth-child(2n-1) .fruit{top: -14vw; right: -17vw;}
+section:nth-child(2n) .fruit{top: -14vw; right: 72vw;}
 
-/* section>ul>span{width: 230px; height: 120%;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }}
+
+.bg-color{width: 100%; height: 50vh;
     position: absolute;
-    left: -15px; top: -10%;
-    display: block;} */
+    left: 0; bottom: 0;}
+.bg-pattern{width: 100%; height: 100vh;
+    position: absolute;
+    top: 0; left: 0;
+    background-size: 5%;
+    z-index: -1;}
+
 
     
-@media all and (min-height:700px) and (min-width:390px){
+section{width: 100vw; height: 100vh;
+    background-color: white;
+    overflow: hidden;
+    position: relative;}
+.sec-wrap{width: 100vw; height: 100vh;
+    position: absolute;
+    top: 0; left: 0;}
+    
+section>h2{font-size: 55px;
+    letter-spacing: -1px;
+    position: absolute;}
 
+.sec1{z-index: 9;}
+.sec1 .fruit{z-index: 10;}
+.sec2{z-index: 7;}
+.sec2 .fruit{z-index: 8;}
+.sec3{z-index: 5;}
+.sec3 .fruit{z-index: 6;}
+.sec4{z-index: 3;}
+.sec4 .fruit{z-index: 4;}
+.sec5{z-index: 1;}
+/* .sec5 .fruit{z-index: 2;} */
+
+
+
+@media all and (min-width:1200px){
+    .mo{display: none;}
+    .pc{display: block;}
+    body{overflow: hidden;}
+
+    section{top: 0; left: 0;
+        position: absolute;
+        background-color: white;}
+
+    section:nth-child(2n-1) .fruit{height: 100vh;
+        position: fixed;
+        right: -50vh; top: 0;
+        animation: none;}
+    section:nth-child(2n) .fruit{height: 100vh;
+        position: fixed;
+        right: -50vh; top: 0;
+        animation: none;}
+
+    .bg-pattern{width: 150%; height: 1510vh;
+        background-size: 2%;
+        transform: translate(-10%,-10%);
+        top: 5vh; left: 5%;}
+    
+    section>h2{font-size: 8vw;}
 }
 
-@media all and (min-width:1000px){
-
-.pc{display: block;}
-.map{display: flex;}
-.mo{display: none;}
-
-.sec1>h2{font-size: 20vh;}
-section>h2{font-size: 8vw;}
-
-}
