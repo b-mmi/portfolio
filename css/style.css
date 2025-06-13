@@ -77,32 +77,32 @@
 
     
     .sec1 h1{font-size: 13vw;
-        top: -14.5vw; left: 2%;}
+        top: -14.5vw; left: 3%;}
     .sec1 p{font-size: 1.2vw;
         letter-spacing: 3px;}
-    .sec1 p:nth-child(3){left: 5vh; top: 32vh;}
-    .sec1 p:nth-child(4){left: 5vh; top: 5vh;}
+    .sec1 p:nth-child(3){left: 7vh; top: 32vh;}
+    .sec1 p:nth-child(4){left: 7vh; top: 5vh;}
     .sec1 .bg-color{height: 50%;}
     /*색션1*/
     
     .sec2>h2{top: -20px; left: 10px;}
     .sec2 .pfp{width: 25.5vh;
-        top: 18%; left: 13%;
+        top: 18%; left: 11%;
         border-radius: 15px;
         transform: translateX(0);}
     .status{width: 60%;
         font-size: 1.8vh;
-        bottom: 25%; left: 13%;
+        bottom: 25%; left: 11%;
         line-height: 1.6;
         letter-spacing: 1px;}
     .status span{font-size: 2vh;}
     .sec2 h3{font-size: 4vh;
-        top: 18%; right: 36%;
+        top: 18%; right: 35%;
         line-height: 1;
         text-align: right;}
     .sec2 h3 span{font-size: 1.8vh;}
     .sec2 h4{font-size: 1.8vh;
-    top: 10%; left: 13%;}
+    top: 10%; left: 11%;}
     .sec2 .sns{font-size: 1.8vh;
         position: absolute;
         bottom: 17%; right: 13%;
