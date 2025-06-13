@@ -11,8 +11,56 @@ $(document).ready(function(){
 
 function mobw(){
    
+   // gsap.from(".sec2 h3", {
+   //    scrollTrigger: {
+   //      trigger: ".sec2",
+   //      start: "-5% 40%",
+   //      end:"bottom bottom",
+   //      markers: true
+   //    },
+   //    x: 30,
+   //    opacity: 0
+   //  });
+   // gsap.from(".pfp", {
+   //    scrollTrigger: {
+   //      trigger: ".sec2",
+   //      start: "-5% 30%",
+   //      end:"bottom bottom",
+   //    },
+   //    y: -30,
+   //    opacity: 0
+   //  });
 
-
+   // gsap.from(".work-1", {
+   //    scrollTrigger: {
+   //      trigger: ".sec4",
+   //      start: "-5% 30%",
+   //      end:"bottom bottom",
+   //    //   markers: true
+   //    },
+   //    x: -30,
+   //    opacity: 0
+   //  });
+   //  gsap.from(".work-2", {
+   //    scrollTrigger: {
+   //      trigger: ".sec4",
+   //      start: "-5% 20%",
+   //      end:"bottom bottom",
+   //    //   markers: true
+   //    },
+   //    x: -30,
+   //    opacity: 0
+   //  });
+   //  gsap.from(".work-3", {
+   //    scrollTrigger: {
+   //      trigger: ".sec4",
+   //      start: "-5% 10%",
+   //      end:"bottom bottom",
+   //    //   markers: true
+   //    },
+   //    x: -30,
+   //    opacity: 0
+   //  });
 }
 
    
@@ -91,6 +139,56 @@ function pcw(){
 //     $(this).siblings('section').eq(sibleq).animate({'width':'100%'})
 //     }})
 
+var swiper = new Swiper(".mySwiper", {
+   slidesPerView: 3,
+   centeredSlides: true,
+   spaceBetween: 30,
+   pagination: {
+     el: ".swiper-pagination",
+     type: "fraction",
+   },
+   navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
+   },
+ });
+
+ var appendNumber = 4;
+ var prependNumber = 1;
+ document
+   .querySelector(".prepend-2-slides")
+   .addEventListener("click", function (e) {
+     e.preventDefault();
+     swiper.prependSlide([
+       '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+       '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+     ]);
+   });
+ document
+   .querySelector(".prepend-slide")
+   .addEventListener("click", function (e) {
+     e.preventDefault();
+     swiper.prependSlide(
+       '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+     );
+   });
+ document
+   .querySelector(".append-slide")
+   .addEventListener("click", function (e) {
+     e.preventDefault();
+     swiper.appendSlide(
+       '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+     );
+   });
+ document
+   .querySelector(".append-2-slides")
+   .addEventListener("click", function (e) {
+     e.preventDefault();
+     swiper.appendSlide([
+       '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+       '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+     ]);
+   });
 }//피씨끝
 
    lastWidth = window.innerWidth;
